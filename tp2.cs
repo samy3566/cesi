@@ -51,7 +51,7 @@ public class Produit : IVendable
 
     public void Vendre()
     {
-        Console.WriteLine($"Le produit '{Nom}' a été vendu.");
+        Console.WriteLine("Le produit '{Nom}' a été vendu.");
     }
 }
 
@@ -109,9 +109,9 @@ public class Entreprise
         using (StreamWriter writer = new StreamWriter(filePath))
         {
             // Écriture des données dans le fichier
-            writer.WriteLine($"Nom: {Nom}");
-            writer.WriteLine($"SIRET: {SIRET}");
-            writer.WriteLine($"Adresse: {Adresse}");
+            writer.WriteLine("Nom: {Nom}");
+            writer.WriteLine("SIRET: {SIRET}");
+            writer.WriteLine("Adresse: {Adresse}");
 
             // ... Écriture des autres données ...
 
@@ -200,7 +200,7 @@ class Program
                         }
                         catch (InvalidOperationException ex)
                         {
-                            Console.WriteLine($"Erreur : {ex.Message}");
+                            Console.WriteLine("Erreur : {ex.Message}");
                         }
                         break;
 
@@ -209,7 +209,7 @@ class Program
                         Console.WriteLine("Liste des produits :");
                         foreach (var produit in entreprise.Produits)
                         {
-                            Console.WriteLine($"Référence : {produit.Reference}, Nom : {produit.Nom}, Prix : {produit.Prix}");
+                            Console.WriteLine("Référence : {produit.Reference}, Nom : {produit.Nom}, Prix : {produit.Prix}");
                         }
                         break;
 
